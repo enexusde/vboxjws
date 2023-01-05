@@ -136,6 +136,37 @@ public class VirtualBoxManager {
 	public static void deinitPerThread() {
 	}
 
+	/**
+	 * Creates a connection to the VBoxWebSrv-Deamon. You might find the executable
+	 * in the Virtualbox-binary-folder.
+	 * <p>
+	 * Usually the url is a typical root-http-url on port <code>18083</code>. In
+	 * example <code>http://localhost:18083/</code>. Remote systems might be allowed
+	 * but for technical reasons you might expire performance issues. I8n domains
+	 * are not allowed, please concider using punycode domains.
+	 * <p>
+	 * The scheme of the url is http, the protocol is not.
+	 * <p>
+	 * Make sure you disconnected to the server using {@link #disconnect()} before
+	 * opening a new Connection.
+	 * 
+	 * @param url      The URL to the system that have the VBoxWebSrv running, never
+	 *                 <code>null</code>
+	 * @param username The username of the process-owner of VBoxWebSrv. This is the
+	 *                 technical username, a eMail for a microsoft-account is not a
+	 *                 valid username. You should concider creating a local/offline
+	 *                 user-account that executes VBoxWebSrv. Never
+	 *                 <code>null</code>
+	 * @param passwd   The password of the user. This password must be a typical
+	 *                 system-password, a PIN or a fingerprint is not valid.
+	 *                 Kerberos is not supported. Never <code>null</code>
+	 * 
+	 * @throws VBoxException If anything is thrown, no matter if {@link Error} or
+	 *                       {@link Exception}. This is like a fault barrier, even
+	 *                       {@link OutOfMemoryError oome's} are encoupsuled. In
+	 *                       order to inspect the real reason of the Exception. You
+	 *                       should use the {@link VBoxException#getCause()}
+	 */
 	public void connect(String url, String username, String passwd) {
 		this.port = pool.getPort();
 		try {
@@ -193,6 +224,16 @@ public class VirtualBoxManager {
 		}
 	}
 
+	/**
+	 * This returns the connected Virtualbox-API. If no connection has been
+	 * established this method will return <code>null</code>.
+	 * <p>
+	 * This API offers a variety of functions to the running Virtualbox. The variety
+	 * is similar to all functionalities you could use the built-in gui of
+	 * virtualbox. But there are more functions you can discover.
+	 * 
+	 * @return The Virtualbox-API, or <code>null</code>
+	 */
 	public IVirtualBox getVBox() {
 		return this.vbox;
 	}
@@ -221,6 +262,14 @@ public class VirtualBoxManager {
 			s.unlockMachine();
 	}
 
+	/**
+	 * This method will create a {@link VirtualBoxManager manager} instance.
+	 * 
+	 * @param home Not used at the moment. Designed maybe for machines having
+	 *             multiple virtualbox installations
+	 * @return The new instance of {@link VirtualBoxManager}, never
+	 *         <code>null</code>
+	 */
 	public static synchronized VirtualBoxManager createInstance(String home) {
 		return new VirtualBoxManager();
 	}
@@ -245,6 +294,28 @@ public class VirtualBoxManager {
 		return true;
 	}
 
+	/**
+	 * This method will start a VM. This is a blocking process.
+	 * <p>
+	 * This method will use no putenv-values.
+	 * 
+	 * @param name    The name or UUID of the machine, never <code>null</code>.
+	 *                Notice that the name might be ambiguous, it is suggested to
+	 *                use the uuid of the VM
+	 * @param type    The type of the VM, valid values are: <tt>gui</tt>,
+	 *                <tt>headless</tt>, <tt>sdl</tt>. <tt>emergencystop</tt> is
+	 *                currently reserved for future use. Empty-string is allowed and
+	 *                means the default type configured for this specific VM.
+	 *                <code>null</code> will be rewritten to <tt>gui</tt>. Invalid
+	 *                values will result in unexpected behavior
+	 * @param timeout The timeout (in ms) the progressbar uses. A value of 0 will
+	 *                always provoke the return value <code>false</code>. This
+	 *                timeout is for informational issues only, will not prevent a
+	 *                threadlock and will not affect the time this method is
+	 *                running.
+	 * @return <code>true</code> if the VM has been started in time,
+	 *         <code>false</code> otherwise
+	 */
 	public boolean startVm(String name, String type, int timeout) {
 		IMachine m = vbox.findMachine(name);
 		if (m == null)
