@@ -335,6 +335,16 @@ public enum MachineState {
 	}
 
 	public static MachineState fromValue(String v) {
+		for (MachineState machineState : MachineState.values()) {
+			if (machineState.name().equals(v)) {
+				return machineState;
+			}
+		}
+		for (MachineState machineState : MachineState.values()) {
+			if (machineState.name().equalsIgnoreCase(v)) {
+				return machineState;
+			}
+		}
 		return valueOf(MachineState.class, v);
 	}
 }
