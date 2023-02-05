@@ -1,0 +1,136 @@
+
+/*
+ * Copyright (C) 2010-2022 Oracle and/or its affiliates.
+ *
+ * This file is part of a free software library; you can redistribute
+ * it and/or modify it under the terms of the GNU Lesser General
+ * Public License version 2.1 as published by the Free Software
+ * Foundation and shipped in the \"COPYING.LIB\" file with this library.
+ * The library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY of any kind.
+ *
+ * Oracle LGPL Disclaimer: For the avoidance of doubt, except that if
+ * any license choice other than GPL or LGPL is available it will
+ * apply instead, Oracle elects to use only the Lesser General Public
+ * License version 2.1 (LGPLv2) at this time for any software where
+ * a choice of LGPL license versions is made available with the
+ * language indicating that LGPLv2 or any later version may be used,
+ * or where a choice of which version of the LGPL is applied is
+ * otherwise unspecified.
+
+ * http://www.virtualbox.org.  This library is free software; you can
+ * redistribute it and/or modify it under the terms of the GNU Lesser General
+ * Public License as published by the Free Software Foundation, in version 2.1
+ * as it comes in the "COPYING.LIB" file of the VirtualBox SDK distribution.
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+ * License for more details.
+ *
+ * SPDX-License-Identifier: LGPL-2.1-only
+ */
+
+/*
+ * IGuestSessionStateChangedEvent.java
+ *
+ * DO NOT EDIT! This is a generated file.
+ * Generated from: src/VBox/Main/idl/VirtualBox.xidl (VirtualBox's interface definitions in XML)
+ * Generator: src/VBox/Main/glue/glue-java.xsl
+ */
+
+package org.virtualbox_7_0;
+
+import org.virtualbox_7_0.jaxws.*;
+import javax.xml.ws.*;
+import java.util.List;
+
+
+/**
+Notification when a guest session changed its state.
+
+Interface ID: <code>{327E3C00-EE61-462F-AED3-0DFF6CBF9904}</code>
+*/
+public class IGuestSessionStateChangedEvent extends IGuestSessionEvent
+{
+
+    public IGuestSessionStateChangedEvent(String wrapped, ObjectRefManager objMgr, VboxPortType port)
+    {
+        super(wrapped, objMgr, port);
+    }
+
+/**
+Session ID of guest session which was changed.
+@return Long
+*/
+    public Long getId()
+    {
+        try
+        {
+            Long retVal = port.iGuestSessionStateChangedEventGetId(obj);
+            return retVal;
+        }
+        catch (InvalidObjectFaultMsg e)
+        {
+            throw new VBoxException(e.getMessage(), e, this.getObjMgr(), this.port);
+        }
+        catch (RuntimeFaultMsg e)
+        {
+            throw new VBoxException(e.getMessage(), e, this.getObjMgr(), this.port);
+        }
+    }
+
+/**
+New session status.
+@return org.virtualbox_7_0.GuestSessionStatus
+*/
+    public org.virtualbox_7_0.GuestSessionStatus getStatus()
+    {
+        try
+        {
+            org.virtualbox_7_0.jaxws.GuestSessionStatus retVal = port.iGuestSessionStateChangedEventGetStatus(obj);
+            return org.virtualbox_7_0.GuestSessionStatus.fromValue(retVal.value());
+        }
+        catch (InvalidObjectFaultMsg e)
+        {
+            throw new VBoxException(e.getMessage(), e, this.getObjMgr(), this.port);
+        }
+        catch (RuntimeFaultMsg e)
+        {
+            throw new VBoxException(e.getMessage(), e, this.getObjMgr(), this.port);
+        }
+    }
+
+/**
+Error information in case of new session status is indicating an error.
+
+The attribute{@link org.virtualbox_7_0.IVirtualBoxErrorInfo#getResultDetail()}will contain
+the runtime (IPRT) error code from the guest. See include/iprt/err.h and
+include/VBox/err.h for details.
+@return org.virtualbox_7_0.IVirtualBoxErrorInfo
+*/
+    public org.virtualbox_7_0.IVirtualBoxErrorInfo getError()
+    {
+        this.getObjMgr().preventObjRelease();
+        try
+        {
+            String retVal = port.iGuestSessionStateChangedEventGetError(obj);
+            return (retVal.length() > 0) ? new org.virtualbox_7_0.IVirtualBoxErrorInfo(retVal, getObjMgr(), port) : null;
+        }
+        catch (InvalidObjectFaultMsg e)
+        {
+            throw new VBoxException(e.getMessage(), e, this.getObjMgr(), this.port);
+        }
+        catch (RuntimeFaultMsg e)
+        {
+            throw new VBoxException(e.getMessage(), e, this.getObjMgr(), this.port);
+        }
+        finally
+        {
+            getObjMgr().allowObjRelease();
+        }
+    }
+    public static IGuestSessionStateChangedEvent queryInterface(IUnknown obj)
+    {
+        return obj == null ?  null : new IGuestSessionStateChangedEvent(obj.getWrapped(), obj.getObjMgr(), obj.getRemoteWSPort());
+    }
+}
