@@ -200,6 +200,10 @@ class ObjectRefManager
         this.objRefMgrCleanup.start();
     }
 
+    public void markShutdown() {
+    	this.objRefMgrCleanup.markShutdown();
+    }
+    
     /**
      * Prevents the object reference manager cleanup thread from releasing any
      * server side objects to avoid a fundamental race in the multi threaded
@@ -361,6 +365,7 @@ class ObjectRefManager
         int                         cStubsReleased;
         int                         cStubsReleaseThreshold;
         HashMap<String, ManagedObj> mapToRelease = new HashMap<String, ManagedObj>();
+        boolean shouldRun = true;
 
         ObjRefMgrCleanupThread(ObjectRefManager objRefMgr)
         {
@@ -385,28 +390,32 @@ class ObjectRefManager
              */
             setDaemon(true);
         }
-
+        void markShutdown() {
+        	shouldRun = false;
+        }
         public void run()
         {
-            while (true)
+            while (shouldRun)
             {
-                while (cStubsReleased < cStubsReleaseThreshold)
+                while (cStubsReleased < cStubsReleaseThreshold && shouldRun)
                 {
                     try
                     {
                         /* Accumulate a few objects before we start. */
-                        while (cStubsReleased < cStubsReleaseThreshold)
+                        while (cStubsReleased < cStubsReleaseThreshold && shouldRun)
                         {
-                            ManagedObjRef ref = (ManagedObjRef)refQ.remove();
-                            ManagedObj obj = this.objRefMgr.unregisterObj(ref);
-                            /*
-                             * If the server side object is not referenced anymore
-                             * promote to map for releasing later.
-                             */
-                            if (obj != null && !mapToRelease.containsKey(ref.objId))
-                                mapToRelease.put(ref.objId, obj);
-
-                            cStubsReleased++;
+                            ManagedObjRef ref = (ManagedObjRef)refQ.remove(100);
+                            if (ref != null) {
+	                            ManagedObj obj = this.objRefMgr.unregisterObj(ref);
+	                            /*
+	                             * If the server side object is not referenced anymore
+	                             * promote to map for releasing later.
+	                             */
+	                            if (obj != null && !mapToRelease.containsKey(ref.objId))
+	                                mapToRelease.put(ref.objId, obj);
+	
+	                            cStubsReleased++;
+                            }
                         }
                     }
                     catch (InterruptedException e)
@@ -427,7 +436,7 @@ class ObjectRefManager
                     try
                     {
                         Iterator<ManagedObj> it = mapToRelease.values().iterator();
-                        while (it.hasNext())
+                        while (it.hasNext() && shouldRun)
                         {
                             ManagedObj obj = it.next();
                             this.objRefMgr.releaseRemoteObj(obj);
@@ -552,6 +561,10 @@ public class VirtualBoxManager
     {
     }
 
+    public void markShutdown() {
+    	objMgr.markShutdown();
+    }
+    
     public static void initPerThread()
     {
     }
