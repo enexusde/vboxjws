@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -353,14 +353,14 @@ provided by each query.
     {
         try
         {
-        javax.xml.ws.Holder<List<String>> tmp_returnMetricNames = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_returnObjects = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_returnUnits = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<Long>> tmp_returnScales = new javax.xml.ws.Holder<List<Long>>();
-        javax.xml.ws.Holder<List<Long>> tmp_returnSequenceNumbers = new javax.xml.ws.Holder<List<Long>>();
-        javax.xml.ws.Holder<List<Long>> tmp_returnDataIndices = new javax.xml.ws.Holder<List<Long>>();
-        javax.xml.ws.Holder<List<Long>> tmp_returnDataLengths = new javax.xml.ws.Holder<List<Long>>();
-        javax.xml.ws.Holder<List<Integer>> retVal = new javax.xml.ws.Holder<List<Integer>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_returnMetricNames = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_returnObjects = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_returnUnits = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<Long>> tmp_returnScales = new jakarta.xml.ws.Holder<List<Long>>();
+        jakarta.xml.ws.Holder<List<Long>> tmp_returnSequenceNumbers = new jakarta.xml.ws.Holder<List<Long>>();
+        jakarta.xml.ws.Holder<List<Long>> tmp_returnDataIndices = new jakarta.xml.ws.Holder<List<Long>>();
+        jakarta.xml.ws.Holder<List<Long>> tmp_returnDataLengths = new jakarta.xml.ws.Holder<List<Long>>();
+        jakarta.xml.ws.Holder<List<Integer>> retVal = new jakarta.xml.ws.Holder<List<Integer>>();
         port.iPerformanceCollectorQueryMetricsData(obj, metricNames, Helper.unwrap(objects), tmp_returnMetricNames, tmp_returnObjects, tmp_returnUnits, tmp_returnScales, tmp_returnSequenceNumbers, tmp_returnDataIndices, tmp_returnDataLengths, retVal);
         returnMetricNames.value = tmp_returnMetricNames.value;
         returnObjects.value = Helper.wrap(IUnknown.class, getObjMgr(), port, tmp_returnObjects.value);

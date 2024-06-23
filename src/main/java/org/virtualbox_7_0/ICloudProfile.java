@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 public class ICloudProfile extends IUnknown
@@ -205,8 +205,8 @@ always returns all existing properties.
     {
         try
         {
-        javax.xml.ws.Holder<List<String>> tmp_returnNames = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> retVal = new javax.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_returnNames = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> retVal = new jakarta.xml.ws.Holder<List<String>>();
         port.iCloudProfileGetProperties(obj, names, tmp_returnNames, retVal);
         returnNames.value = tmp_returnNames.value;
            return retVal.value;

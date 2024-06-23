@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -4652,12 +4652,12 @@ Used to enumerate CPUID information override values.
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_idx = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_idxSub = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_valEax = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_valEbx = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_valEcx = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_valEdx = new javax.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_idx = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_idxSub = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEax = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEbx = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEcx = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEdx = new jakarta.xml.ws.Holder<Long>();
         port.iMachineGetCPUIDLeafByOrdinal(obj, ordinal, tmp_idx, tmp_idxSub, tmp_valEax, tmp_valEbx, tmp_valEcx, tmp_valEdx);
         idx.value = tmp_idx.value;
         idxSub.value = tmp_idxSub.value;
@@ -4707,10 +4707,10 @@ about the CPUID instruction and its leaves.
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_valEax = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_valEbx = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_valEcx = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_valEdx = new javax.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEax = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEbx = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEcx = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEdx = new jakarta.xml.ws.Holder<Long>();
         port.iMachineGetCPUIDLeaf(obj, idx, idxSub, tmp_valEax, tmp_valEbx, tmp_valEcx, tmp_valEdx);
         valEax.value = tmp_valEax.value;
         valEbx.value = tmp_valEbx.value;
@@ -5369,9 +5369,9 @@ server process.
     {
         try
         {
-        javax.xml.ws.Holder<String> tmp_value = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<Long> tmp_timestamp = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<String> tmp_flags = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_value = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<Long> tmp_timestamp = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<String> tmp_flags = new jakarta.xml.ws.Holder<String>();
         port.iMachineGetGuestProperty(obj, name, tmp_value, tmp_timestamp, tmp_flags);
         value.value = tmp_value.value;
         timestamp.value = tmp_timestamp.value;
@@ -5564,10 +5564,10 @@ corresponding entries in the  name array.
     {
         try
         {
-        javax.xml.ws.Holder<List<String>> tmp_names = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_values = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<Long>> tmp_timestamps = new javax.xml.ws.Holder<List<Long>>();
-        javax.xml.ws.Holder<List<String>> tmp_flags = new javax.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_names = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_values = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<Long>> tmp_timestamps = new jakarta.xml.ws.Holder<List<Long>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_flags = new jakarta.xml.ws.Holder<List<String>>();
         port.iMachineEnumerateGuestProperties(obj, patterns, tmp_names, tmp_values, tmp_timestamps, tmp_flags);
         names.value = tmp_names.value;
         values.value = tmp_values.value;
@@ -5603,11 +5603,11 @@ Returns the guest dimensions from the saved state.
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_originX = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_originY = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_width = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_height = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Boolean> tmp_enabled = new javax.xml.ws.Holder<Boolean>();
+        jakarta.xml.ws.Holder<Long> tmp_originX = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_originY = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_width = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_height = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Boolean> tmp_enabled = new jakarta.xml.ws.Holder<Boolean>();
         port.iMachineQuerySavedGuestScreenInfo(obj, screenId, tmp_originX, tmp_originY, tmp_width, tmp_height, tmp_enabled);
         originX.value = tmp_originX.value;
         originY.value = tmp_originY.value;
@@ -5642,9 +5642,9 @@ Thumbnail is retrieved to an array of bytes in the requested format.
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_width = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_height = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder</*base64*/String> retVal = new javax.xml.ws.Holder</*base64*/String>();
+        jakarta.xml.ws.Holder<Long> tmp_width = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_height = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder</*base64*/String> retVal = new jakarta.xml.ws.Holder</*base64*/String>();
         port.iMachineReadSavedThumbnailToArray(obj, screenId, org.virtualbox_7_0.jaxws.BitmapFormat.fromValue(bitmapFormat.name()), tmp_width, tmp_height, retVal);
         width.value = tmp_width.value;
         height.value = tmp_height.value;
@@ -5675,9 +5675,9 @@ Returns available formats and size of the screenshot from saved state.
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_width = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_height = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.BitmapFormat>> retVal = new javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.BitmapFormat>>();
+        jakarta.xml.ws.Holder<Long> tmp_width = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_height = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.BitmapFormat>> retVal = new jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.BitmapFormat>>();
         port.iMachineQuerySavedScreenshotInfo(obj, screenId, tmp_width, tmp_height, retVal);
         width.value = tmp_width.value;
         height.value = tmp_height.value;
@@ -5710,9 +5710,9 @@ Screenshot in requested format is retrieved to an array of bytes.
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_width = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_height = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder</*base64*/String> retVal = new javax.xml.ws.Holder</*base64*/String>();
+        jakarta.xml.ws.Holder<Long> tmp_width = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_height = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder</*base64*/String> retVal = new jakarta.xml.ws.Holder</*base64*/String>();
         port.iMachineReadSavedScreenshotToArray(obj, screenId, org.virtualbox_7_0.jaxws.BitmapFormat.fromValue(bitmapFormat.name()), tmp_width, tmp_height, retVal);
         width.value = tmp_width.value;
         height.value = tmp_height.value;
@@ -6137,8 +6137,8 @@ save all current machine settings before taking an offline snapshot.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_id = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_id = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iMachineTakeSnapshot(obj, name, description, pause, tmp_id, retVal);
         id.value = tmp_id.value;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;
@@ -6488,8 +6488,8 @@ Returns the encryption settings for this VM.
     {
         try
         {
-        javax.xml.ws.Holder<String> tmp_cipher = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> tmp_passwordId = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_cipher = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_passwordId = new jakarta.xml.ws.Holder<String>();
         port.iMachineGetEncryptionSettings(obj, tmp_cipher, tmp_passwordId);
         cipher.value = tmp_cipher.value;
         passwordId.value = tmp_passwordId.value;

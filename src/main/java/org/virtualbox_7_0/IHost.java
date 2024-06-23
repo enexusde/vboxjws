@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -756,10 +756,10 @@ description for this exact CPU.
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_valEax = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_valEbx = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_valEcx = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_valEdx = new javax.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEax = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEbx = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEcx = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_valEdx = new jakarta.xml.ws.Holder<Long>();
         port.iHostGetProcessorCPUIDLeaf(obj, cpuId, leaf, subLeaf, tmp_valEax, tmp_valEbx, tmp_valEcx, tmp_valEdx);
         valEax.value = tmp_valEax.value;
         valEbx.value = tmp_valEbx.value;
@@ -792,8 +792,8 @@ Creates a new adapter for Host Only Networking.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_hostInterface = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_hostInterface = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iHostCreateHostOnlyNetworkInterface(obj, tmp_hostInterface, retVal);
         hostInterface.value = (tmp_hostInterface.value.length() > 0) ? new org.virtualbox_7_0.IHostNetworkInterface(tmp_hostInterface.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;

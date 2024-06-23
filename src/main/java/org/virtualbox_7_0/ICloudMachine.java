@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -385,8 +385,8 @@ The form is editable.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_form = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_form = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudMachineGetSettingsForm(obj, tmp_form, retVal);
         form.value = (tmp_form.value.length() > 0) ? new org.virtualbox_7_0.IForm(tmp_form.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;
@@ -628,8 +628,8 @@ xpcom.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_stream = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_stream = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudMachineGetConsoleHistory(obj, tmp_stream, retVal);
         stream.value = (tmp_stream.value.length() > 0) ? new org.virtualbox_7_0.IDataStream(tmp_stream.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;

@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 public class IMachineDebugger extends IUnknown
@@ -961,8 +961,8 @@ register was returned by{@link org.virtualbox_7_0.IMachineDebugger#getRegister(L
     {
         try
         {
-        javax.xml.ws.Holder<List<String>> tmp_names = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_values = new javax.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_names = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_values = new jakarta.xml.ws.Holder<List<String>>();
         port.iMachineDebuggerGetRegisters(obj, cpuId, tmp_names, tmp_values);
         names.value = tmp_names.value;
         values.value = tmp_values.value;
@@ -1162,10 +1162,10 @@ scheduler, on virtualization overhead and on other tasks.
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_pctExecuting = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_pctHalted = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_pctOther = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> retVal = new javax.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_pctExecuting = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_pctHalted = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_pctOther = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> retVal = new jakarta.xml.ws.Holder<Long>();
         port.iMachineDebuggerGetCPULoad(obj, cpuId, tmp_pctExecuting, tmp_pctHalted, tmp_pctOther, retVal);
         pctExecuting.value = tmp_pctExecuting.value;
         pctHalted.value = tmp_pctHalted.value;

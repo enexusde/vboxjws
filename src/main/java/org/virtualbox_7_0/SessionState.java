@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 
 /**
 Session state. This enumeration represents possible values of{@link org.virtualbox_7_0.IMachine#getSessionState()}and{@link org.virtualbox_7_0.ISession#getState()}attributes.

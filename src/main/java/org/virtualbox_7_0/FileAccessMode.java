@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 
 /**
 File open access mode for use with{@link org.virtualbox_7_0.IGuestSession#fileOpen(String,org.virtualbox_7_0.FileAccessMode,org.virtualbox_7_0.FileOpenAction,Long)}and{@link org.virtualbox_7_0.IGuestSession#fileOpenEx(String,org.virtualbox_7_0.FileAccessMode,org.virtualbox_7_0.FileOpenAction,org.virtualbox_7_0.FileSharingMode,Long,List)}.

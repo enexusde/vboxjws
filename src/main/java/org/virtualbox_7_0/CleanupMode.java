@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 
 /**
 Cleanup mode, used with{@link org.virtualbox_7_0.IMachine#unregister(org.virtualbox_7_0.CleanupMode)}.

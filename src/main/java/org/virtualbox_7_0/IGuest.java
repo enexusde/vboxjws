@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -411,19 +411,19 @@ Internal method; do not use as it might change at any time.
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_cpuUser = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_cpuKernel = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_cpuIdle = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_memTotal = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_memFree = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_memBalloon = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_memShared = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_memCache = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_pagedTotal = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_memAllocTotal = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_memFreeTotal = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_memBalloonTotal = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_memSharedTotal = new javax.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_cpuUser = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_cpuKernel = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_cpuIdle = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_memTotal = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_memFree = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_memBalloon = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_memShared = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_memCache = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_pagedTotal = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_memAllocTotal = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_memFreeTotal = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_memBalloonTotal = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_memSharedTotal = new jakarta.xml.ws.Holder<Long>();
         port.iGuestInternalGetStatistics(obj, tmp_cpuUser, tmp_cpuKernel, tmp_cpuIdle, tmp_memTotal, tmp_memFree, tmp_memBalloon, tmp_memShared, tmp_memCache, tmp_pagedTotal, tmp_memAllocTotal, tmp_memFreeTotal, tmp_memBalloonTotal, tmp_memSharedTotal);
         cpuUser.value = tmp_cpuUser.value;
         cpuKernel.value = tmp_cpuKernel.value;
@@ -462,8 +462,8 @@ Get the current status of a Guest Additions facility.
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_timestamp = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<org.virtualbox_7_0.jaxws.AdditionsFacilityStatus> retVal = new javax.xml.ws.Holder<org.virtualbox_7_0.jaxws.AdditionsFacilityStatus>();
+        jakarta.xml.ws.Holder<Long> tmp_timestamp = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<org.virtualbox_7_0.jaxws.AdditionsFacilityStatus> retVal = new jakarta.xml.ws.Holder<org.virtualbox_7_0.jaxws.AdditionsFacilityStatus>();
         port.iGuestGetFacilityStatus(obj, org.virtualbox_7_0.jaxws.AdditionsFacilityType.fromValue(facility.name()), tmp_timestamp, retVal);
         timestamp.value = tmp_timestamp.value;
            return org.virtualbox_7_0.AdditionsFacilityStatus.fromValue(retVal.value.value());

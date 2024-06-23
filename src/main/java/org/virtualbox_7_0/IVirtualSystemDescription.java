@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -150,11 +150,11 @@ may be different from the virtual soundcard expected by the appliance.</li></ul>
     {
         try
         {
-        javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.VirtualSystemDescriptionType>> tmp_types = new javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.VirtualSystemDescriptionType>>();
-        javax.xml.ws.Holder<List<String>> tmp_refs = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_OVFValues = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_VBoxValues = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_extraConfigValues = new javax.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.VirtualSystemDescriptionType>> tmp_types = new jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.VirtualSystemDescriptionType>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_refs = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_OVFValues = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_VBoxValues = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_extraConfigValues = new jakarta.xml.ws.Holder<List<String>>();
         port.iVirtualSystemDescriptionGetDescription(obj, tmp_types, tmp_refs, tmp_OVFValues, tmp_VBoxValues, tmp_extraConfigValues);
         types.value = Helper.convertEnums(org.virtualbox_7_0.jaxws.VirtualSystemDescriptionType.class, org.virtualbox_7_0.VirtualSystemDescriptionType.class, tmp_types.value);
         refs.value = tmp_refs.value;
@@ -180,11 +180,11 @@ should be returned.
     {
         try
         {
-        javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.VirtualSystemDescriptionType>> tmp_types = new javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.VirtualSystemDescriptionType>>();
-        javax.xml.ws.Holder<List<String>> tmp_refs = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_OVFValues = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_VBoxValues = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_extraConfigValues = new javax.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.VirtualSystemDescriptionType>> tmp_types = new jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.VirtualSystemDescriptionType>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_refs = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_OVFValues = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_VBoxValues = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_extraConfigValues = new jakarta.xml.ws.Holder<List<String>>();
         port.iVirtualSystemDescriptionGetDescriptionByType(obj, org.virtualbox_7_0.jaxws.VirtualSystemDescriptionType.fromValue(type.name()), tmp_types, tmp_refs, tmp_OVFValues, tmp_VBoxValues, tmp_extraConfigValues);
         types.value = Helper.convertEnums(org.virtualbox_7_0.jaxws.VirtualSystemDescriptionType.class, org.virtualbox_7_0.VirtualSystemDescriptionType.class, tmp_types.value);
         refs.value = tmp_refs.value;

@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -82,9 +82,9 @@ If no drag and drop operation is pending currently, DnDAction_Ignore is returned
     {
         try
         {
-        javax.xml.ws.Holder<List<String>> tmp_formats = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DnDAction>> tmp_allowedActions = new javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DnDAction>>();
-        javax.xml.ws.Holder<org.virtualbox_7_0.jaxws.DnDAction> retVal = new javax.xml.ws.Holder<org.virtualbox_7_0.jaxws.DnDAction>();
+        jakarta.xml.ws.Holder<List<String>> tmp_formats = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DnDAction>> tmp_allowedActions = new jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DnDAction>>();
+        jakarta.xml.ws.Holder<org.virtualbox_7_0.jaxws.DnDAction> retVal = new jakarta.xml.ws.Holder<org.virtualbox_7_0.jaxws.DnDAction>();
         port.iDnDSourceDragIsPending(obj, screenId, tmp_formats, tmp_allowedActions, retVal);
         formats.value = tmp_formats.value;
         allowedActions.value = Helper.convertEnums(org.virtualbox_7_0.jaxws.DnDAction.class, org.virtualbox_7_0.DnDAction.class, tmp_allowedActions.value);

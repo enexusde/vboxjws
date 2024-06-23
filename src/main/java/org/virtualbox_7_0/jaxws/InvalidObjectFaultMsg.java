@@ -1,7 +1,7 @@
 
 package org.virtualbox_7_0.jaxws;
 
-import javax.xml.ws.WebFault;
+import jakarta.xml.ws.WebFault;
 
 
 /**

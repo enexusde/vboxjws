@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 public class ICloudClient extends IUnknown
@@ -123,8 +123,8 @@ exporting a local VM into a cloud custom image.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_form = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_form = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientGetExportDescriptionForm(obj, ((description == null) ? null :description.getWrapped()), tmp_form, retVal);
         form.value = (tmp_form.value.length() > 0) ? new org.virtualbox_7_0.IVirtualSystemDescriptionForm(tmp_form.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;
@@ -171,8 +171,8 @@ machine and all required parameters.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_form = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_form = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientGetLaunchDescriptionForm(obj, ((description == null) ? null :description.getWrapped()), tmp_form, retVal);
         form.value = (tmp_form.value.length() > 0) ? new org.virtualbox_7_0.IVirtualSystemDescriptionForm(tmp_form.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;
@@ -228,8 +228,8 @@ import from cloud.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_form = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_form = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientGetImportDescriptionForm(obj, ((description == null) ? null :description.getWrapped()), tmp_form, retVal);
         form.value = (tmp_form.value.length() > 0) ? new org.virtualbox_7_0.IVirtualSystemDescriptionForm(tmp_form.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;
@@ -379,8 +379,8 @@ This is kinda like adding a local .vbox file as a local VM.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_machine = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_machine = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientAddCloudMachine(obj, instanceId, tmp_machine, retVal);
         machine.value = (tmp_machine.value.length() > 0) ? new org.virtualbox_7_0.ICloudMachine(tmp_machine.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;
@@ -414,8 +414,8 @@ machine and all required parameters.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_machine = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_machine = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientCreateCloudMachine(obj, ((description == null) ? null :description.getWrapped()), tmp_machine, retVal);
         machine.value = (tmp_machine.value.length() > 0) ? new org.virtualbox_7_0.ICloudMachine(tmp_machine.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;
@@ -450,9 +450,9 @@ Returns the list of the instances in the Cloud.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_returnNames = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> tmp_returnIds = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnNames = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnIds = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientListInstances(obj, Helper.convertEnums(org.virtualbox_7_0.CloudMachineState.class, org.virtualbox_7_0.jaxws.CloudMachineState.class, machineState), tmp_returnNames, tmp_returnIds, retVal);
         returnNames.value = (tmp_returnNames.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnNames.value, getObjMgr(), port) : null;
         returnIds.value = (tmp_returnIds.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnIds.value, getObjMgr(), port) : null;
@@ -487,9 +487,9 @@ added/adopted as VirtualBox cloud machines.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_returnNames = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> tmp_returnIds = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnNames = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnIds = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientListSourceInstances(obj, tmp_returnNames, tmp_returnIds, retVal);
         returnNames.value = (tmp_returnNames.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnNames.value, getObjMgr(), port) : null;
         returnIds.value = (tmp_returnIds.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnIds.value, getObjMgr(), port) : null;
@@ -525,9 +525,9 @@ Returns the list of the images in the Cloud.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_returnNames = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> tmp_returnIds = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnNames = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnIds = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientListImages(obj, Helper.convertEnums(org.virtualbox_7_0.CloudImageState.class, org.virtualbox_7_0.jaxws.CloudImageState.class, imageState), tmp_returnNames, tmp_returnIds, retVal);
         returnNames.value = (tmp_returnNames.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnNames.value, getObjMgr(), port) : null;
         returnIds.value = (tmp_returnIds.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnIds.value, getObjMgr(), port) : null;
@@ -561,9 +561,9 @@ Returns the list of boot volumes in the Cloud.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_returnNames = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> tmp_returnIds = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnNames = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnIds = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientListBootVolumes(obj, tmp_returnNames, tmp_returnIds, retVal);
         returnNames.value = (tmp_returnNames.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnNames.value, getObjMgr(), port) : null;
         returnIds.value = (tmp_returnIds.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnIds.value, getObjMgr(), port) : null;
@@ -598,9 +598,9 @@ added/adopted as VirtualBox cloud machines.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_returnNames = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> tmp_returnIds = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnNames = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnIds = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientListSourceBootVolumes(obj, tmp_returnNames, tmp_returnIds, retVal);
         returnNames.value = (tmp_returnNames.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnNames.value, getObjMgr(), port) : null;
         returnIds.value = (tmp_returnIds.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnIds.value, getObjMgr(), port) : null;
@@ -636,9 +636,9 @@ Returns the list of the Vnic attachements in the Cloud.
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_returnVnicAttachmentIds = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> tmp_returnVnicIds = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnVnicAttachmentIds = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_returnVnicIds = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientListVnicAttachments(obj, parameters, tmp_returnVnicAttachmentIds, tmp_returnVnicIds, retVal);
         returnVnicAttachmentIds.value = (tmp_returnVnicAttachmentIds.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnVnicAttachmentIds.value, getObjMgr(), port) : null;
         returnVnicIds.value = (tmp_returnVnicIds.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_returnVnicIds.value, getObjMgr(), port) : null;
@@ -919,8 +919,8 @@ Each parameter in the array must be in the form "name=value".
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_infoArray = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_infoArray = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientGetImageInfo(obj, uid, tmp_infoArray, retVal);
         infoArray.value = (tmp_infoArray.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_infoArray.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;
@@ -943,8 +943,8 @@ Each parameter in the array must be in the form "name=value".
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_gatewayInfo = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_gatewayInfo = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientStartCloudNetworkGateway(obj, ((network == null) ? null :network.getWrapped()), sshPublicKey, tmp_gatewayInfo, retVal);
         gatewayInfo.value = (tmp_gatewayInfo.value.length() > 0) ? new org.virtualbox_7_0.ICloudNetworkGatewayInfo(tmp_gatewayInfo.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;
@@ -967,8 +967,8 @@ Each parameter in the array must be in the form "name=value".
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_networkEnvironmentInfo = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_networkEnvironmentInfo = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientSetupCloudNetworkEnvironment(obj, tunnelNetworkName, tunnelNetworkRange, gatewayOsName, gatewayOsVersion, gatewayShape, tmp_networkEnvironmentInfo, retVal);
         networkEnvironmentInfo.value = (tmp_networkEnvironmentInfo.value.length() > 0) ? new org.virtualbox_7_0.ICloudNetworkEnvironmentInfo(tmp_networkEnvironmentInfo.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;
@@ -1002,8 +1002,8 @@ Each parameter in the array must be in the form "name=value".
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_infoArray = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_infoArray = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientGetVnicInfo(obj, uid, tmp_infoArray, retVal);
         infoArray.value = (tmp_infoArray.value.length() > 0) ? new org.virtualbox_7_0.IStringArray(tmp_infoArray.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;
@@ -1026,8 +1026,8 @@ Each parameter in the array must be in the form "name=value".
         this.getObjMgr().preventObjRelease();
         try
         {
-        javax.xml.ws.Holder<String> tmp_form = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_form = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iCloudClientGetSubnetSelectionForm(obj, ((description == null) ? null :description.getWrapped()), tmp_form, retVal);
         form.value = (tmp_form.value.length() > 0) ? new org.virtualbox_7_0.IVirtualSystemDescriptionForm(tmp_form.value, getObjMgr(), port) : null;
            return (retVal.value.length() > 0) ? new org.virtualbox_7_0.IProgress(retVal.value, getObjMgr(), port) : null;

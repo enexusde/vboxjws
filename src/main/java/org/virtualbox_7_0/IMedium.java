@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -1285,8 +1285,8 @@ always returns all existing properties.
     {
         try
         {
-        javax.xml.ws.Holder<List<String>> tmp_returnNames = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> retVal = new javax.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_returnNames = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> retVal = new jakarta.xml.ws.Holder<List<String>>();
         port.iMediumGetProperties(obj, names, tmp_returnNames, retVal);
         returnNames.value = tmp_returnNames.value;
            return retVal.value;
@@ -1930,8 +1930,8 @@ Returns the encryption settings for this medium.
     {
         try
         {
-        javax.xml.ws.Holder<String> tmp_cipher = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_cipher = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.iMediumGetEncryptionSettings(obj, tmp_cipher, retVal);
         cipher.value = tmp_cipher.value;
            return retVal.value;

@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -108,12 +108,12 @@ All return parameters are optional.
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_width = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_height = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_bitsPerPixel = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Integer> tmp_xOrigin = new javax.xml.ws.Holder<Integer>();
-        javax.xml.ws.Holder<Integer> tmp_yOrigin = new javax.xml.ws.Holder<Integer>();
-        javax.xml.ws.Holder<org.virtualbox_7_0.jaxws.GuestMonitorStatus> tmp_guestMonitorStatus = new javax.xml.ws.Holder<org.virtualbox_7_0.jaxws.GuestMonitorStatus>();
+        jakarta.xml.ws.Holder<Long> tmp_width = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_height = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_bitsPerPixel = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Integer> tmp_xOrigin = new jakarta.xml.ws.Holder<Integer>();
+        jakarta.xml.ws.Holder<Integer> tmp_yOrigin = new jakarta.xml.ws.Holder<Integer>();
+        jakarta.xml.ws.Holder<org.virtualbox_7_0.jaxws.GuestMonitorStatus> tmp_guestMonitorStatus = new jakarta.xml.ws.Holder<org.virtualbox_7_0.jaxws.GuestMonitorStatus>();
         port.iDisplayGetScreenResolution(obj, screenId, tmp_width, tmp_height, tmp_bitsPerPixel, tmp_xOrigin, tmp_yOrigin, tmp_guestMonitorStatus);
         width.value = tmp_width.value;
         height.value = tmp_height.value;
@@ -293,13 +293,13 @@ False otherwise.
     {
         try
         {
-        javax.xml.ws.Holder<Boolean> tmp_enabled = new javax.xml.ws.Holder<Boolean>();
-        javax.xml.ws.Holder<Boolean> tmp_changeOrigin = new javax.xml.ws.Holder<Boolean>();
-        javax.xml.ws.Holder<Integer> tmp_originX = new javax.xml.ws.Holder<Integer>();
-        javax.xml.ws.Holder<Integer> tmp_originY = new javax.xml.ws.Holder<Integer>();
-        javax.xml.ws.Holder<Long> tmp_width = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_height = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_bitsPerPixel = new javax.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Boolean> tmp_enabled = new jakarta.xml.ws.Holder<Boolean>();
+        jakarta.xml.ws.Holder<Boolean> tmp_changeOrigin = new jakarta.xml.ws.Holder<Boolean>();
+        jakarta.xml.ws.Holder<Integer> tmp_originX = new jakarta.xml.ws.Holder<Integer>();
+        jakarta.xml.ws.Holder<Integer> tmp_originY = new jakarta.xml.ws.Holder<Integer>();
+        jakarta.xml.ws.Holder<Long> tmp_width = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_height = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_bitsPerPixel = new jakarta.xml.ws.Holder<Long>();
         port.iDisplayGetVideoModeHint(obj, display, tmp_enabled, tmp_changeOrigin, tmp_originX, tmp_originY, tmp_width, tmp_height, tmp_bitsPerPixel);
         enabled.value = tmp_enabled.value;
         changeOrigin.value = tmp_changeOrigin.value;

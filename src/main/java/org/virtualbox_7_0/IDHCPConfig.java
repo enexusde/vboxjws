@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -385,8 +385,8 @@ the DHCP  option value and the  encoding, see{@link org.virtualbox_7_0.DHCPOptio
     {
         try
         {
-        javax.xml.ws.Holder<org.virtualbox_7_0.jaxws.DHCPOptionEncoding> tmp_encoding = new javax.xml.ws.Holder<org.virtualbox_7_0.jaxws.DHCPOptionEncoding>();
-        javax.xml.ws.Holder<String> retVal = new javax.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<org.virtualbox_7_0.jaxws.DHCPOptionEncoding> tmp_encoding = new jakarta.xml.ws.Holder<org.virtualbox_7_0.jaxws.DHCPOptionEncoding>();
+        jakarta.xml.ws.Holder<String> retVal = new jakarta.xml.ws.Holder<String>();
         port.idhcpConfigGetOption(obj, org.virtualbox_7_0.jaxws.DHCPOption.fromValue(option.name()), tmp_encoding, retVal);
         encoding.value = org.virtualbox_7_0.DHCPOptionEncoding.fromValue(tmp_encoding.value.value());
            return retVal.value;
@@ -415,9 +415,9 @@ format depends on both of those.
     {
         try
         {
-        javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DHCPOption>> tmp_options = new javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DHCPOption>>();
-        javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DHCPOptionEncoding>> tmp_encodings = new javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DHCPOptionEncoding>>();
-        javax.xml.ws.Holder<List<String>> retVal = new javax.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DHCPOption>> tmp_options = new jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DHCPOption>>();
+        jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DHCPOptionEncoding>> tmp_encodings = new jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DHCPOptionEncoding>>();
+        jakarta.xml.ws.Holder<List<String>> retVal = new jakarta.xml.ws.Holder<List<String>>();
         port.idhcpConfigGetAllOptions(obj, tmp_options, tmp_encodings, retVal);
         options.value = Helper.convertEnums(org.virtualbox_7_0.jaxws.DHCPOption.class, org.virtualbox_7_0.DHCPOption.class, tmp_options.value);
         encodings.value = Helper.convertEnums(org.virtualbox_7_0.jaxws.DHCPOptionEncoding.class, org.virtualbox_7_0.DHCPOptionEncoding.class, tmp_encodings.value);

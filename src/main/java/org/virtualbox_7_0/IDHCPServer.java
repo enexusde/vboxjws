@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -441,10 +441,10 @@ a VM on a host only network.
     {
         try
         {
-        javax.xml.ws.Holder<String> tmp_address = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> tmp_state = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<Long> tmp_issued = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_expire = new javax.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<String> tmp_address = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_state = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<Long> tmp_issued = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_expire = new jakarta.xml.ws.Holder<Long>();
         port.idhcpServerFindLeaseByMAC(obj, mac, type, tmp_address, tmp_state, tmp_issued, tmp_expire);
         address.value = tmp_address.value;
         state.value = tmp_state.value;

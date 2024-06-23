@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.net.URL;
 import java.math.BigInteger;
 import java.util.Iterator;
@@ -58,9 +58,9 @@ import java.lang.Integer;
 import java.lang.ref.WeakReference;
 import java.lang.ref.ReferenceQueue;
 import javax.xml.namespace.QName;
-import javax.xml.ws.BindingProvider;
-import javax.xml.ws.Holder;
-import javax.xml.ws.WebServiceException;
+import jakarta.xml.ws.BindingProvider;
+import jakarta.xml.ws.Holder;
+import jakarta.xml.ws.WebServiceException;
 import java.io.IOException;
 import java.net.UnknownHostException;
 import java.net.Socket;
@@ -420,7 +420,7 @@ class ObjectRefManager
                     }
                     catch (InterruptedException e)
                     { /* ignore */ }
-                    catch (javax.xml.ws.WebServiceException e)
+                    catch (jakarta.xml.ws.WebServiceException e)
                     { /* ignore */ }
                 }
 
@@ -444,7 +444,7 @@ class ObjectRefManager
 
                         mapToRelease.clear();
                     }
-                    catch (javax.xml.ws.WebServiceException e)
+                    catch (jakarta.xml.ws.WebServiceException e)
                     { /* ignore */ }
                     finally
                     {

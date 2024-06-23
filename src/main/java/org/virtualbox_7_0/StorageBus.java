@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 
 /**
 The bus type of the storage controller (IDE, SATA, SCSI, SAS or Floppy);

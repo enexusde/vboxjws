@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -193,9 +193,9 @@ Queries the variable content variable by the given name.
     {
         try
         {
-        javax.xml.ws.Holder<String> tmp_owner = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.UefiVariableAttributes>> tmp_attributes = new javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.UefiVariableAttributes>>();
-        javax.xml.ws.Holder</*base64*/String> tmp_data = new javax.xml.ws.Holder</*base64*/String>();
+        jakarta.xml.ws.Holder<String> tmp_owner = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.UefiVariableAttributes>> tmp_attributes = new jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.UefiVariableAttributes>>();
+        jakarta.xml.ws.Holder</*base64*/String> tmp_data = new jakarta.xml.ws.Holder</*base64*/String>();
         port.iUefiVariableStoreQueryVariableByName(obj, name, tmp_owner, tmp_attributes, tmp_data);
         owner.value = tmp_owner.value;
         attributes.value = Helper.convertEnums(org.virtualbox_7_0.jaxws.UefiVariableAttributes.class, org.virtualbox_7_0.UefiVariableAttributes.class, tmp_attributes.value);
@@ -222,8 +222,8 @@ Queries all variables in the non volatile storage and returns their names.
     {
         try
         {
-        javax.xml.ws.Holder<List<String>> tmp_names = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_owners = new javax.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_names = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_owners = new jakarta.xml.ws.Holder<List<String>>();
         port.iUefiVariableStoreQueryVariables(obj, tmp_names, tmp_owners);
         names.value = tmp_names.value;
         owners.value = tmp_owners.value;

@@ -8,10 +8,9 @@
 	<name>Java interface for the service vboxwebsrv</name>
 	<dependencies>
 		<dependency>
-			<groupId>javax.xml.ws</groupId>
-			<artifactId>jaxws-api</artifactId>
-			<version>2.3.1</version>
-			<scope>provided</scope>
+			<groupId>jakarta.xml.ws</groupId>
+			<artifactId>jakarta.xml.ws-api</artifactId>
+			<version>4.0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.main.javaee-api</groupId>

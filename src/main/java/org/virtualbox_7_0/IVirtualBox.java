@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -1860,9 +1860,9 @@ downloaded from.
     {
         try
         {
-        javax.xml.ws.Holder<String> tmp_url = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<String> tmp_file = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<Boolean> retVal = new javax.xml.ws.Holder<Boolean>();
+        jakarta.xml.ws.Holder<String> tmp_url = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<String> tmp_file = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<Boolean> retVal = new jakarta.xml.ws.Holder<Boolean>();
         port.iVirtualBoxCheckFirmwarePresent(obj, org.virtualbox_7_0.jaxws.FirmwareType.fromValue(firmwareType.name()), version, tmp_url, tmp_file, retVal);
         url.value = tmp_url.value;
         file.value = tmp_file.value;

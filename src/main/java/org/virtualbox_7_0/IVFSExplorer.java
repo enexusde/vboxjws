@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -211,10 +211,10 @@ list up do date.
     {
         try
         {
-        javax.xml.ws.Holder<List<String>> tmp_names = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<Long>> tmp_types = new javax.xml.ws.Holder<List<Long>>();
-        javax.xml.ws.Holder<List<Long>> tmp_sizes = new javax.xml.ws.Holder<List<Long>>();
-        javax.xml.ws.Holder<List<Long>> tmp_modes = new javax.xml.ws.Holder<List<Long>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_names = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<Long>> tmp_types = new jakarta.xml.ws.Holder<List<Long>>();
+        jakarta.xml.ws.Holder<List<Long>> tmp_sizes = new jakarta.xml.ws.Holder<List<Long>>();
+        jakarta.xml.ws.Holder<List<Long>> tmp_modes = new jakarta.xml.ws.Holder<List<Long>>();
         port.ivfsExplorerEntryList(obj, tmp_names, tmp_types, tmp_sizes, tmp_modes);
         names.value = tmp_names.value;
         types.value = tmp_types.value;

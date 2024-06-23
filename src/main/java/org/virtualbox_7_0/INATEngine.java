@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -566,11 +566,11 @@ Returns network configuration of NAT engine. See{@link #setNetworkSettings(Long,
     {
         try
         {
-        javax.xml.ws.Holder<Long> tmp_mtu = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_sockSnd = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_sockRcv = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_TcpWndSnd = new javax.xml.ws.Holder<Long>();
-        javax.xml.ws.Holder<Long> tmp_TcpWndRcv = new javax.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_mtu = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_sockSnd = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_sockRcv = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_TcpWndSnd = new jakarta.xml.ws.Holder<Long>();
+        jakarta.xml.ws.Holder<Long> tmp_TcpWndRcv = new jakarta.xml.ws.Holder<Long>();
         port.inatEngineGetNetworkSettings(obj, tmp_mtu, tmp_sockSnd, tmp_sockRcv, tmp_TcpWndSnd, tmp_TcpWndRcv);
         mtu.value = tmp_mtu.value;
         sockSnd.value = tmp_sockSnd.value;

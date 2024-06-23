@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 
 /**
 What a file seek ({@link org.virtualbox_7_0.IFile#seek(Long,org.virtualbox_7_0.FileSeekOrigin)}) is relative to.

@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 
 /**
 Virtual medium type. For each{@link org.virtualbox_7_0.IMedium}, this defines how the medium is

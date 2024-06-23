@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -168,8 +168,8 @@ empty.
     {
         try
         {
-        javax.xml.ws.Holder<List<String>> tmp_extensions = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DeviceType>> tmp_types = new javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DeviceType>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_extensions = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DeviceType>> tmp_types = new jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DeviceType>>();
         port.iMediumFormatDescribeFileExtensions(obj, tmp_extensions, tmp_types);
         extensions.value = tmp_extensions.value;
         types.value = Helper.convertEnums(org.virtualbox_7_0.jaxws.DeviceType.class, org.virtualbox_7_0.DeviceType.class, tmp_types.value);
@@ -212,11 +212,11 @@ All arguments must be non- null.
     {
         try
         {
-        javax.xml.ws.Holder<List<String>> tmp_names = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<String>> tmp_descriptions = new javax.xml.ws.Holder<List<String>>();
-        javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DataType>> tmp_types = new javax.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DataType>>();
-        javax.xml.ws.Holder<List<Long>> tmp_flags = new javax.xml.ws.Holder<List<Long>>();
-        javax.xml.ws.Holder<List<String>> tmp_defaults = new javax.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_names = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_descriptions = new jakarta.xml.ws.Holder<List<String>>();
+        jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DataType>> tmp_types = new jakarta.xml.ws.Holder<List<org.virtualbox_7_0.jaxws.DataType>>();
+        jakarta.xml.ws.Holder<List<Long>> tmp_flags = new jakarta.xml.ws.Holder<List<Long>>();
+        jakarta.xml.ws.Holder<List<String>> tmp_defaults = new jakarta.xml.ws.Holder<List<String>>();
         port.iMediumFormatDescribeProperties(obj, tmp_names, tmp_descriptions, tmp_types, tmp_flags, tmp_defaults);
         names.value = tmp_names.value;
         descriptions.value = tmp_descriptions.value;

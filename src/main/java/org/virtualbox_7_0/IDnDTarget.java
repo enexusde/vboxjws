@@ -41,7 +41,7 @@
 package org.virtualbox_7_0;
 
 import org.virtualbox_7_0.jaxws.*;
-import javax.xml.ws.*;
+import jakarta.xml.ws.*;
 import java.util.List;
 
 
@@ -192,8 +192,8 @@ Informs the target about a drop event.
     {
         try
         {
-        javax.xml.ws.Holder<String> tmp_format = new javax.xml.ws.Holder<String>();
-        javax.xml.ws.Holder<org.virtualbox_7_0.jaxws.DnDAction> retVal = new javax.xml.ws.Holder<org.virtualbox_7_0.jaxws.DnDAction>();
+        jakarta.xml.ws.Holder<String> tmp_format = new jakarta.xml.ws.Holder<String>();
+        jakarta.xml.ws.Holder<org.virtualbox_7_0.jaxws.DnDAction> retVal = new jakarta.xml.ws.Holder<org.virtualbox_7_0.jaxws.DnDAction>();
         port.iDnDTargetDrop(obj, screenId, x, y, org.virtualbox_7_0.jaxws.DnDAction.fromValue(defaultAction.name()), Helper.convertEnums(org.virtualbox_7_0.DnDAction.class, org.virtualbox_7_0.jaxws.DnDAction.class, allowedActions), formats, tmp_format, retVal);
         format.value = tmp_format.value;
            return org.virtualbox_7_0.DnDAction.fromValue(retVal.value.value());
